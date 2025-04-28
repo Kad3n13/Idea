@@ -85,3 +85,4 @@ nmap -sS -sV -p- $TARGET_IP -oN scan_results.txt
 
 </body>
 </html>
+<img Screenshot 2025-04-28 063837.png</img>
