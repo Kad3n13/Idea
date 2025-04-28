@@ -85,4 +85,18 @@ nmap -sS -sV -p- $TARGET_IP -oN scan_results.txt
 
 </body>
 </html>
-<img Screenshot 2025-04-28 063837.png</img>
+<img
+    src="Screenshot 2025-04-28 063837.png"
+    alt="Workflow Screenshot showing flowchart steps"
+    class="screenshot"
+    width="800"
+/>
+
+  <p>
+    The above screenshot illustrates our red-teaming tool architecture, with inputs on the left (Target IP, Operator IP, Port), 
+    scanning steps (AsmScan Shell → Nmap Execution), decision logic (open services?), 
+    and the reverse shell or monitor loop branches on the right. 
+  </p>
+
+</body>
+</html>
