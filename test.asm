@@ -5,14 +5,26 @@ reverse_shell_cmd db "/bin/bash", 0
 search_str	db "open", 0
 file_buffer	times 256 db 0
 file_descriptor dq 0
-target		db "
+target		db "111.0.0.1" 0 ; Replace
+
+;arguments for nmap
+arg0 db "nmap", 0
+arg1 db "-sS", 0
+arg2 db "-sV", 0
+arg3 db "-sC", 0
+arg4 db "-Pn", 0
+arg5 db "-p-", 0
+
+;array
+argv dq arg0, arg1, arg2, arg3, arg4, arg5, 0
 
 section .text
 global _start
 
+_start
 mov rax, 59
 lea rdi, [nmap_cmd]
-lea rsi, [target]
+lea rsi, [argv]
 xor rdx, rdx
 syscall
 
